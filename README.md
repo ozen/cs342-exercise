@@ -6,6 +6,7 @@ This is an exercise of multi thread programming in C.
 
 #### Question:
 
+<blockquote>
 Write a multi-threaded C program that will count the number of occurrences of words in 
 an input set of text files. There will be M input text files (indexed as 0..M-1) containing 
 words of alphanumerical characters (M can be at most 100). The names of the files are 
@@ -27,10 +28,10 @@ words and their counts. For example, counter thread 0 will read intermediate fil
 example, will read the files temp0-3, temp1-3, …, temp(M-1)-3. A counter thread may 
 emit <word, count> pairs as follows (one pair per line). 
 
-an 10 
-school 15 
-university 8 
-zero 12 
+an 10
+school 15
+university 8
+zero 12
 
 At the end, R temporary output files will be produced. A merger thread will merge them 
 and will produce a single final file that contains all unique words and their counts in 
@@ -42,7 +43,7 @@ wordcount <M> <R> <infile1> … <infileM> <finalfile>
 An example invocation is: 
 
 wordcount 3 2 infile1.txt infile2.txt infile3.txt final.txt
-
+</blockquote>
 
 ## pc.c
 
@@ -50,6 +51,7 @@ This is an example of mutex lock solution to producer-consumer synchronization p
 
 #### Question:
 
+<blockquote>
 Implement the following producer-consumer program. There are two producer threads 
 and one consumer thread. There is a single shared linked list (shared buffer) between 
 producers and consumer that can hold at most 100 integers. There are two input files, 
@@ -68,3 +70,4 @@ An example invocation is:
 pc in1.txt in2.txt out.txt
 
 Use POSIX semaphores for synchronization. 
+</blockquote>
