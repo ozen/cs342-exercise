@@ -27,10 +27,10 @@ words and their counts. For example, counter thread 0 will read intermediate fil
 example, will read the files temp0-3, temp1-3, …, temp(M-1)-3. A counter thread may 
 emit `<word, count>` pairs as follows (one pair per line). 
 
-an 10
-school 15
-university 8
-zero 12
+an 10  
+school 15  
+university 8  
+zero 12  
 
 At the end, R temporary output files will be produced. A merger thread will merge them 
 and will produce a single final file that contains all unique words and their counts in 
