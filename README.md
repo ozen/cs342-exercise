@@ -6,7 +6,6 @@ This is an exercise of multi thread programming in C.
 
 #### Question:
 
-<blockquote>
 Write a multi-threaded C program that will count the number of occurrences of words in 
 an input set of text files. There will be M input text files (indexed as 0..M-1) containing 
 words of alphanumerical characters (M can be at most 100). The names of the files are 
@@ -26,7 +25,7 @@ occurances of each unique word, and will emit to a temporary output file the uni
 words and their counts. For example, counter thread 0 will read intermediate files 
 (partitions) temp0-0, temp1-0, temp2-0, …, temp(M-1)-0. The counter thread 3, for 
 example, will read the files temp0-3, temp1-3, …, temp(M-1)-3. A counter thread may 
-emit <word, count> pairs as follows (one pair per line). 
+emit `<word, count>` pairs as follows (one pair per line). 
 
 an 10
 school 15
@@ -38,12 +37,11 @@ and will produce a single final file that contains all unique words and their co
 sorted order (according to words – use strcmp for comparing two words). The name of 
 the final file will be taken from the command line as the last argument of the program. 
 Name your program as wordcount. The parameters are: 
-wordcount <M> <R> <infile1> … <infileM> <finalfile>
+wordcount `<M>` `<R>` `<infile1>` … `<infileM>` `<finalfile>`
 
 An example invocation is: 
 
 wordcount 3 2 infile1.txt infile2.txt infile3.txt final.txt
-</blockquote>
 
 ## pc.c
 
@@ -51,7 +49,6 @@ This is an example of mutex lock solution to producer-consumer synchronization p
 
 #### Question:
 
-<blockquote>
 Implement the following producer-consumer program. There are two producer threads 
 and one consumer thread. There is a single shared linked list (shared buffer) between 
 producers and consumer that can hold at most 100 integers. There are two input files, 
@@ -63,11 +60,10 @@ integer value, the other field will keep the ID (0 or 1) of the producer putting
 In this way consumer can understand from which producer the integer is coming. The 
 consumer will read the integers from the shared buffer and will merge them and write 
 them in sorted order to an output file. At the end, output file is in sorted order. Program is 
-called pc and has the following parameters: pc <infile1> <infile2> <outfile>.
+called pc and has the following parameters: pc `<infile1>` `<infile2>` `<outfile>`.
 
 An example invocation is: 
 
 pc in1.txt in2.txt out.txt
 
 Use POSIX semaphores for synchronization. 
-</blockquote>
